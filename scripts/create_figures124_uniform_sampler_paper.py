@@ -12,7 +12,7 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib
 
-fig_folder = '../figs/'
+fig_folder = '../figures/'
 
 colors = matplotlib.cm.Set1
 n_min,n_max = 2,7

@@ -10,7 +10,7 @@ import boolforge as bf
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig_folder = '../figs/'
+fig_folder = '../figures/'
 
 N = 12
 ns = [2,3,4,5,6]
