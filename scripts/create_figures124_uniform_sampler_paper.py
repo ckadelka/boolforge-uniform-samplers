@@ -12,6 +12,7 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib
 
+fig_folder = '../figs/'
 
 colors = matplotlib.cm.Set1
 n_min,n_max = 2,7
@@ -96,7 +97,7 @@ for i,metric in enumerate(metrics_x):
     if i==2:
         ax[i].set_xlabel('Number of NCF inputs')
     ax[i].set_ylabel(labels_metrics[i])
-plt.savefig(f'impact_summary_n_{n_min}_{n_max}.pdf',bbox_inches='tight')
+plt.savefig(fig_folder + f'impact_summary_n_{n_min}_{n_max}.pdf',bbox_inches='tight')
     
 
 
@@ -130,7 +131,7 @@ for i,metric in enumerate(metrics_x):
     ax[i].set_xlabel(labels_metrics[i])
     if i==0:
         ax[i].set_ylabel('Relative parameter-uniform\nsampling weight of NCFs')
-plt.savefig(f'impact_detailed_n_{n_min}_{n_max}.pdf',bbox_inches='tight')
+plt.savefig(fig_folder + f'impact_detailed_n_{n_min}_{n_max}.pdf',bbox_inches='tight')
 
 
 
@@ -360,7 +361,7 @@ mean_degree = np.array([np.mean(el) for el in degree])
 # ax.set_ylim([y1,y2])
 # ax.set_xlabel('Expected function-uniform mean average sensitivity')
 # ax.set_ylabel('Observed mean average sensitivity')
-# plt.savefig('bio_models1.pdf',bbox_inches='tight')
+# plt.savefig(fig_folder+'bio_models1.pdf',bbox_inches='tight')
 
 # f,ax = plt.subplots()
 # im = ax.scatter(mean_exp_avg_sens_parameter_uniform,
@@ -373,7 +374,7 @@ mean_degree = np.array([np.mean(el) for el in degree])
 # ax.set_ylim([y1,y2])
 # ax.set_xlabel('Expected parameter-uniform mean average sensitivity')
 # ax.set_ylabel('Observed mean average sensitivity')
-# plt.savefig('bio_models2.pdf',bbox_inches='tight')
+# plt.savefig(fig_folder+'bio_models2.pdf',bbox_inches='tight')
 
 # f,ax = plt.subplots()
 # im = ax.scatter(mean_exp_avg_sens_parameter_uniform,
@@ -386,7 +387,7 @@ mean_degree = np.array([np.mean(el) for el in degree])
 # ax.set_ylim([y1,y2])
 # ax.set_xlabel('Expected parameter-uniform mean average sensitivity')
 # ax.set_ylabel('Expected function-uniform mean average sensitivity')
-# plt.savefig('bio_models3.pdf',bbox_inches='tight')
+# plt.savefig(fig_folder+'bio_models3.pdf',bbox_inches='tight')
 
 # f,ax = plt.subplots()
 # im = ax.scatter(mean_observed_avg_sens,
@@ -400,7 +401,7 @@ mean_degree = np.array([np.mean(el) for el in degree])
 # ax.set_ylim([y1,y2])
 # ax.set_xlabel('Observed mean average sensitivity')
 # ax.set_ylabel('Expected-Observed mean average sensitivity\nwhen using function-uniform sampling')
-# plt.savefig('bio_models4.pdf',bbox_inches='tight')
+# plt.savefig(fig_folder+'bio_models4.pdf',bbox_inches='tight')
 
 
 # f,ax = plt.subplots()
@@ -415,7 +416,7 @@ mean_degree = np.array([np.mean(el) for el in degree])
 # ax.set_ylim([y1,y2])
 # ax.set_xlabel('Observed mean average sensitivity')
 # ax.set_ylabel('Expected-Observed mean average sensitivity\nwhen using parameter-uniform sampling')
-# plt.savefig('bio_models5.pdf',bbox_inches='tight')
+# plt.savefig(fig_folder+'bio_models5.pdf',bbox_inches='tight')
 
 
 
@@ -523,7 +524,7 @@ for bn in bns:
 #     ax.set_xlim([x1,x2])
 #     ax.set_ylim([y1,y2])
 #     ax.set_title(f'Degree = {n}')
-#     plt.savefig(f'bio_models_ncf_fc_{n}.pdf',bbox_inches='tight')
+#     plt.savefig(fig_folder + f'bio_models_ncf_fc_{n}.pdf',bbox_inches='tight')
 
 
 
@@ -596,4 +597,4 @@ for ii,n in enumerate(ns):
         FuncFormatter(lambda y, _: f'{y:g}')
     )
 
-plt.savefig('bio_models_ncf_fc_all.pdf',bbox_inches='tight')         
+plt.savefig(fig_folder+'bio_models_ncf_fc_all.pdf',bbox_inches='tight')         

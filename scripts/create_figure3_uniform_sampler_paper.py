@@ -10,6 +10,8 @@ import boolforge as bf
 import numpy as np
 import matplotlib.pyplot as plt
 
+fig_folder = '../figs/'
+
 N = 12
 ns = [2,3,4,5,6]
 nsim = 10000
@@ -94,6 +96,11 @@ axes[0].legend(frameon=False,bbox_to_anchor=[0.5,1.1],
 
 axes[-1].set_xlabel('Constant in-degree')
 axes[-1].set_xticks(ns)
-plt.savefig('dynamics_implication_uniform_sampler.pdf',bbox_inches='tight')
+plt.savefig(fig_folder+'dynamics_implication_uniform_sampler.pdf',bbox_inches='tight')
+
+
+f,ax = plt.subplots()
+ax.plot([0,1])
+plt.savefig(fig_folder+'d.pdf',bbox_inches='tight')
 
             
