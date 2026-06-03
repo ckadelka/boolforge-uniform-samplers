@@ -99,8 +99,4 @@ axes[-1].set_xticks(ns)
 plt.savefig(fig_folder+'dynamics_implication_uniform_sampler.pdf',bbox_inches='tight')
 
 
-f,ax = plt.subplots()
-ax.plot([0,1])
-plt.savefig(fig_folder+'d.pdf',bbox_inches='tight')
-
             
